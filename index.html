@@ -4,11 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinbuild Workflow Test</title>
+    <style>
+        :root {
+            --ink: #1d1d1f;
+            --muted: #6e6e73;
+            --accent: #1d6f42;
+            --surface: #f5f5f7;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--ink);
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 96px 24px 80px;
+            text-align: center;
+        }
+        .hero__eyebrow {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 0 0 16px;
+        }
+        .hero__title {
+            font-size: clamp(2rem, 6vw, 3.25rem);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+            margin: 0 0 20px;
+        }
+        .hero__copy {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.5;
+            color: var(--muted);
+            margin: 0 auto 32px;
+            max-width: 34em;
+        }
+        .hero__actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            min-height: 44px;
+            line-height: 20px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .btn--primary {
+            background: var(--accent);
+            color: #fff;
+        }
+        .btn--primary:hover { background: #175a35; }
+        .btn--ghost {
+            background: var(--surface);
+            color: var(--ink);
+        }
+        .btn--ghost:hover { background: #e8e8ed; }
+        .btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+        @media (max-width: 480px) {
+            .hero { padding: 64px 20px 56px; }
+            .hero__actions { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
 </head>
 <body>
     <main>
-        <h1>Spinbuild Workflow Test</h1>
-        <p>Your workflow is set up and ready to run.</p>
+        <section class="hero">
+            <p class="hero__eyebrow">Spinbuild Workflow Test</p>
+            <h1 class="hero__title">Your workflow, set up and ready to run.</h1>
+            <p class="hero__copy">
+                A simple starting point for the Spinbuild workflow test — clean, fast,
+                and ready for whatever you build next.
+            </p>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="#get-started">Get started</a>
+                <a class="btn btn--ghost" href="#learn-more">Learn more</a>
+            </div>
+        </section>
     </main>
 </body>
 </html>
